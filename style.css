@@ -1,0 +1,209 @@
+  .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: max-content;
+    padding: 50px;
+
+  }
+img{
+  width:100%;
+  height: auto;
+  
+}
+h1{
+  font-family:sans-serif;
+  font-size:clamp(1.5rem, 8vw, 5.5rem);
+  font-weight: 700;
+  padding-left: 20px;
+  margin-top: 40px;
+  color: hsl(24, 5%, 18%);
+}
+p{
+  margin-bottom: 70px;
+  font-family: sans-serif;
+  margin-top: 30px;
+  font-size: 22px;
+  color: rgb(63, 63, 63);
+  text-indent: 50px;
+  padding-left: 20px;
+}
+.block1{
+  padding: 30px;
+  margin-top: 50px;
+  background-color:hsl(32, 35%, 92%);
+}
+.block1 h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
+}
+.block1 span{
+  font-weight: bold;
+}
+.block1 ul{
+  margin: 50px;
+  line-height: 40px;
+  font-size:1.2rem;
+  color:hsl(30, 10%, 34%);
+}
+.block1 li{
+  padding-left: 20px   ;
+}
+
+.block2{
+  background-color: white;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.block2 h2{
+  font-size: 2.5rem;
+  color: hsl(332, 51%, 32%);
+  font-weight: 600;
+  padding-left: 30px;
+}
+.block2 ul{
+  padding-left: 60px;
+  margin-top: 10px;
+  line-height: 45px;
+  color: hsl(30, 10%, 34%);
+  font-size:1.2rem;
+}
+
+.block3{
+  margin-top: 50px;
+  background-color: hsl(0%, 0%, 100%);
+}
+.block3 h2 , .block4 h2{
+  color: hsl(332, 51%, 32%);
+  font-size: 2.5rem;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.block4{
+  margin-top: 30px;
+}
+.block3 ol{
+ padding-right:10px;
+ padding-left: 60px;
+  line-height: 45px;
+  color: hsl(30, 10%, 34%);
+
+  font-size: 1.2rem;
+}
+.block3 li{
+  padding-left: 20px;
+  text-align: justify;
+}
+
+table{
+  width: 80%;
+  font-size: 1.5rem;
+  padding-left: 40px;
+}
+table tr td{
+  color: hsl(30, 10%, 34%);
+  padding: 20px;
+  padding-left: 50px;
+  border-bottom: 2px solid hsl(30, 10%, 88%);
+  align-items: center;
+}
+table tr :nth-child(2){
+  color: hsl(332, 51%, 32%);
+  font-weight: bold;
+}
+
+.attribution{
+  margin-top: 30px;
+}
+
+@media (max-width:610px) {
+ 
+  .container{
+    width: 100%;
+    padding: 10px;
+  }
+  .block1, .block2, .block3, .block4{
+    padding: 20px;
+    margin: 10px;
+    margin-top: 0px;
+    margin-bottom: -30px;
+  } 
+  .block2{
+    margin-bottom: 10px;
+  }
+  .block1 h2, .block2 h2, .block3 h2, .block4 h2{
+    font-size: 25px;
+  }
+  .block1 li, .block2 li, .block3 li, .block4 li{
+    font-size: 18px;
+    padding-left: 5px;
+    line-height: 30px;
+    margin-top: 2px;
+  }
+  .block1 ul{
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-top: 10px;
+  }
+  .block1{
+    margin-top: 20px;
+  }
+  .block4{
+    margin-top: 20px;
+    margin-bottom: -50px;
+  }
+  .block4 p{
+padding: 10px;
+line-height: 28px;
+  }
+  ul, li {
+    padding-left:20px;
+    margin-left:-20px;
+  }
+  p{
+    font-size: 20px;
+    margin-bottom: 0px;
+    text-align: justify;
+    padding: 10px;
+  }
+  table{
+    width: 100%;
+    font-size: 1.2rem;
+    padding-left: 0px;
+  }
+h1{
+    font-size:2rem;
+
+}
+.attribution{
+  margin-top: 50px;
+}
+
+  
+}
+
+/* ----animation scrolling---- */
+
+@keyframes appear {
+   from{
+    opacity: 0;
+    scale: 0.5;
+   }  
+   to{
+    opacity: 1;
+    scale: 1;
+   }
+}
+
+.block1, .block2, .block3, .block4{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+}
